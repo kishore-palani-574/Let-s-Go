@@ -1,37 +1,4 @@
 button{
     border-radius: 60px;
     background-color: #e2b2b2;
-    padding: 10px 40px;
-    margin-top: 10%;
-}
-*{
-    text-align: center;
-}
-#start{
-    margin-top: 30%;
-}
-@media screen  and (max-width:412px) and  (max-height:917px) {
-    #start{
-        margin-top: 100%;
-    }
-    .a{
-        margin-top: 150px;
-    }
-    
-}
-@media screen  and (max-width:412px) and  (max-height:917px) {
-    #sign{
-        margin-top: 20%;
-    }
-    button{
-        margin-top: 10%;
-        margin-bottom: 30%;
-    }
-    h1{
-        margin-bottom: 38%;
-    }
-    
-}
-#sign{
-    margin-top: 20%;
 }
