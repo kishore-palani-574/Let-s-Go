@@ -1,4 +1,35 @@
-button{
+button {
     border-radius: 60px;
     background-color: #e2b2b2;
+    padding: 10px 40px;
+}
+
+#start {
+    margin-top: 20%;
+}
+
+#sign {
+    margin-top: 10%;
+}
+
+.a {
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin-top: 50px;
+}
+.login{
+    margin-top: 8%;
+}
+.b{
+    border-radius: 5px;
+    border-collapse: collapse;
+    padding: 10px;
+    margin-top: 7px;
+    width: 18%;
+}
+.c{
+    margin-left: -200px;
+}
+.details{
+    margin-top: 5%;
 }
