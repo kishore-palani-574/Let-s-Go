@@ -1,6 +1,7 @@
-*{
+* {
     font-family: Nunito;
 }
+
 button {
     border-radius: 60px;
     background-color: #e2b2b2;
@@ -20,18 +21,22 @@ button {
     padding: 10px 50px;
     margin-top: 50px;
 }
-.login{
+
+.login {
     margin-top: 20%;
 }
-.b{
+
+.b {
     border-radius: 5px;
     padding: 10px;
     margin-top: 7px;
     width: 18%;
 }
-.c{
+
+.c {
     margin-left: -200px;
 }
-.details{
+
+.details {
     margin-top: 18%;
 }
