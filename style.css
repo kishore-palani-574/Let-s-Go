@@ -1,3 +1,6 @@
+*{
+    font-family: Nunito;
+}
 button {
     border-radius: 60px;
     background-color: #e2b2b2;
@@ -5,11 +8,11 @@ button {
 }
 
 #start {
-    margin-top: 20%;
+    margin-top: 30%;
 }
 
 #sign {
-    margin-top: 10%;
+    margin-top: 25%;
 }
 
 .a {
@@ -18,11 +21,10 @@ button {
     margin-top: 50px;
 }
 .login{
-    margin-top: 8%;
+    margin-top: 20%;
 }
 .b{
     border-radius: 5px;
-    border-collapse: collapse;
     padding: 10px;
     margin-top: 7px;
     width: 18%;
@@ -31,5 +33,5 @@ button {
     margin-left: -200px;
 }
 .details{
-    margin-top: 5%;
+    margin-top: 18%;
 }

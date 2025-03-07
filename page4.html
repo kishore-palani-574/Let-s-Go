@@ -12,16 +12,22 @@
         <center>
             <h1>Details</h1><br>
             <form>
-                <label  class="d">Full Name</label><br>
-                <input class="b" type="text" required><br><br>
-                <label class="d">Date of Birth</label><br>
+                <label>Full Name</label><br>
+                <input class="b" type="text" placeholder="Name" required><br><br>
+                <label>Date of Birth</label><br>
                 <input class="b" type="date" required><br><br>
-                <label class="d">Gender</label><br>
-                <input class="b" type="text" required><br><br>
-                <label>Phone</label><br>
-                <input class="b" type="number" required><br><br>
-                <label class="d">Select Country</label><br>
-<select class="b" name="country">
+                <label for="gender">Gender</label><br>
+<select class="b" style="width: 20%;" name="gender"><br>
+    <option value="">-- Select Gender --</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+    <option value="prefer_not_say">Prefer not to say</option>
+</select><br><br>
+
+                
+                <label>Select Country</label><br>
+<select class="b" style="width: 20%;" name="country">
     <option value="">-- Select a Country --</option>
     <option value="AF">Afghanistan</option>
     <option value="AL">Albania</option>
