@@ -6,7 +6,7 @@
     <link rel="icon" href="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-login">
     <div class="container">
         <h1>Login</h1>
         <form>
@@ -19,8 +19,8 @@
                 <input type="password" id="password" class="input-bordered" placeholder="Password" required>
             </div>
             <div class="checkbox-group">
-                <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">Remember me</label>
+                <input type="checkbox" id="showPasswordCheckbox">
+                <label for="showPasswordCheckbox">Show Password</label>
             </div>
             <button class="btn" type="submit">Log in</button>
         </form>
@@ -33,5 +33,18 @@
             <a href="create.html" style="font-weight: 600;">Sign up</a>
         </div>
     </div>
+
+    <script>
+        // Find the checkbox and the password field elements
+        const showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
+        const passwordField = document.getElementById('password');
+
+        // Add an event listener to the checkbox
+        showPasswordCheckbox.addEventListener('change', function() {
+            // Use a ternary operator to toggle the password field's type
+            // If checkbox is checked, type is 'text'; otherwise, it's 'password'
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+    </script>
 </body>
 </html>

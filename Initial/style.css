@@ -32,7 +32,7 @@ h1 {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* This removes the underline */
     color: #000;
     font-size: 0.9rem;
 }
@@ -127,41 +127,43 @@ a {
 
 
 /* ======================================================= */
-/* === SUPER COMPACT RULES FOR MOBILE SCREENS ONLY (FIX) === */
+/* === PAGE-SPECIFIC RULES FOR MOBILE SCREENS (FIX) === */
 /* ======================================================= */
 /* This rule now checks for narrow width AND short height */
 @media (max-width: 480px) and (max-height: 740px) {
-    body {
-        align-items: flex-start; /* Align to top instead of center */
+    /* Rule for the LONG 'Create Account' page */
+    body.page-create {
+        align-items: flex-start;
         padding-top: 20px;
     }
-
-    h1 {
-        font-size: 1.5rem;   /* Even smaller title */
-        margin-bottom: 15px; /* Less space below title */
+    
+    /* On the Create Account page, make everything more compact */
+    .page-create h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
     }
-
-    .form-group {
-        margin-bottom: 10px; /* Less space between form fields */
+    .page-create .form-group {
+        margin-bottom: 10px;
     }
-
-    .input-underlined {
+    .page-create .input-underlined {
         padding: 5px 0;
     }
-    
-    .form-group label {
+    .page-create .form-group label {
         font-size: 1rem;
-        margin-bottom: 0; /* No space between label and line */
+        margin-bottom: 0;
     }
-
-    .separator {
-        margin: 12px 0; /* Less space around the 'OR' */
+    .page-create .separator {
+        margin: 12px 0;
     }
-
-    .btn {
-        padding: 10px;       /* Smaller button */
+    .page-create .btn {
+        padding: 10px;
         margin-top: 10px;
         font-size: 1rem;
+    }
+
+    /* Rule for the SHORT 'Login' page */
+    .page-login .footer-text {
+        margin-top: 25px;
     }
 }
 
@@ -171,6 +173,6 @@ a {
 /* ======================================= */
 @media (min-width: 768px) {
     .container {
-        max-width: 450px; /* Wider container on large screens */
+        max-width: 450px;
     }
 }

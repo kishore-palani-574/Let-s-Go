@@ -4,15 +4,93 @@
     <title> Let's Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png">
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* --- Main Containers --- */
+        .container {
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none; /* This removes the underline */
+            color: #000;
+        }
+
+        /* ======================================= */
+        /* === NEW LAYOUT FOR START PAGE === */
+        /* ======================================= */
+        .page-start .container {
+            height: 80vh; /* Set a tall container */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-wrapper {
+            flex-grow: 1; /* This makes the wrapper take all available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* This centers the logo vertically */
+            align-items: center;
+        }
+
+        .page-start .btn {
+            width: auto;
+            padding: 12px 45px; /* Resized the button */
+            flex-shrink: 0; /* Prevents button from shrinking */
+        }
+        
+        /* --- General Button Styles --- */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background-color: #e8b4b4;
+            color: #000;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .btn-pill {
+            border-radius: 50px;
+        }
+
+    </style>
 </head>
-<body>
-   <div class="container">
-        <div>
-            <img src="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png" height="90" alt="Bus Icon">
-            <p style="font-size: 1.2rem; margin-top: 10px;">Let's Go</p>
+<body class="page-start">
+    <div class="container">
+        <div class="logo-wrapper">
+            <div>
+                <img src="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png" height="90" alt="Bus Icon">
+                <p style="font-size: 1.2rem; margin-top: 10px;">Let's Go</p>
+            </div>
         </div>
-        <a href="welcome.html" class="btn btn-pill">Start--&gt;</a>
+        
+        <a href="welcome.html" class="btn btn-pill">Start &rarr;</a>
     </div>
 </body>
 </html>
