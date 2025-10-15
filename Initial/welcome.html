@@ -4,16 +4,92 @@
     <title> Let's Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png">
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* --- Main Containers --- */
+        .container {
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        h2 {
+            font-weight: 500;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            /* max-width: 250px; <-- This line was removed to make buttons wider */
+            padding: 15px;
+            border: 1px solid #000;
+            background-color: #e8b4b4;
+            color: #000;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        
+        /* ======================================= */
+        /* === LAYOUT FOR WELCOME PAGE === */
+        /* ======================================= */
+        .page-welcome .container {
+            height: 80vh; /* Set a tall container */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* This spaces the 3 items apart */
+            align-items: center;
+        }
+        
+        /* Remove extra margins from headings on this page */
+        .page-welcome h1, .page-welcome h2 {
+            margin: 0;
+        }
+
+    </style>
 </head>
-<body>
+<body class="page-welcome">
     <div class="container">
         <h1>Welcome</h1>
+
         <div>
             <a href="login.html" class="btn">Sign in</a><br>
             <a href="create.html" class="btn">Sign up</a>
         </div>
-        <h2 style="font-weight: 500;">Happy Journey</h2>
+        
+        <h2>Happy Journey</h2>
     </div>
 </body>
 </html>

@@ -125,6 +125,21 @@ a {
     margin-top: 40px;
 }
 
+/* ======================================= */
+/* === PAGE-SPECIFIC STYLES === */
+/* ======================================= */
+.page-welcome .container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-welcome h1, .page-welcome h2 {
+    margin: 0;
+}
+
 
 /* ======================================================= */
 /* === PAGE-SPECIFIC RULES FOR MOBILE SCREENS (FIX) === */
