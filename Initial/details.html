@@ -1,254 +1,64 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title> Let's Go</title>
-    <link rel="icon"
-        href="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png">
+    <title>Let's Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20231014/original/pngtree-tourist-coach-bus-icon-tour-bus-picture-image_13153076.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .profile-container {
-            text-align: center;
-            position: relative;
-        }
-
-        .profile-wrapper {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #999;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f0f0f0; /* Light background when no image */
-            position: relative;
-            cursor: pointer;
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none; /* Hidden initially */
-        }
-
-        .alt-text {
-            position: absolute;
-            color: gray;
-            font-size: 12px;
-            text-align: center;
-            width: 100%;
-            pointer-events: none;
-        }
-
-        #file-input {
-            display: none;
-        }
-
-        .label-text {
-            display: block;
-            font-size: 14px;
-            color: gray;
-             margin-bottom: 8px;
-            cursor: pointer;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="details">
-        <center>
-            <h1>Details</h1>
-            <div class="profile-container">
-                <label for="file-input">
-                    <div class="profile-wrapper">
-                        <span class="alt-text">Profile Picture</span>
-                        <img src="" alt="Profile Picture" class="profile-pic" id="profilePic">
-                    </div>
-                </label>
-                <input type="file" id="file-input" accept="image/*">
-                <span class="label-text">Profile Picture</span>
-            </div>
-        
-            <form>
-                <label>Full Name</label><br>
-                <input class="b" type="text" placeholder="Name" required><br><br>
-                <label>Date of Birth</label><br>
-                <input class="b" type="date" required><br><br>
-                <label for="gender">Gender</label><br>
-                <select class="b" style="width: 17.8%;" name="gender"><br>
-                    <option value="">-- Select Gender --</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                    <option value="prefer_not_say">Prefer not to say</option>
-                </select><br><br>
+    <div class="main-container">
+        <h1>Details</h1>
+        <div class="profile-container">
+            <label for="file-input">
+                <div class="profile-wrapper">
+                    <img src="" alt="Profile Picture Upload" class="profile-pic" id="profilePic">
+                </div>
+                <span>Profile Picture</span>
+            </label>
+            <input type="file" id="file-input" accept="image/*">
+        </div>
+    
+        <form>
+            <label class="form-label">Full Name</label>
+            <input class="form-input" type="text" placeholder="Name" required>
 
+            <label class="form-label">Date of Birth</label>
+            <input class="form-input" type="date" required>
 
-                <label>Select Country</label><br>
-                <select class="b" style="width: 17.8%;" name="country">
-                    <option value="">-- Select a Country --</option>
-                    <option value="AF">Afghanistan</option>
-                    <option value="AL">Albania</option>
-                    <option value="DZ">Algeria</option>
-                    <option value="AD">Andorra</option>
-                    <option value="AO">Angola</option>
-                    <option value="AG">Antigua and Barbuda</option>
-                    <option value="AR">Argentina</option>
-                    <option value="AM">Armenia</option>
-                    <option value="AU">Australia</option>
-                    <option value="AT">Austria</option>
-                    <option value="AZ">Azerbaijan</option>
-                    <option value="BS">Bahamas</option>
-                    <option value="BH">Bahrain</option>
-                    <option value="BD">Bangladesh</option>
-                    <option value="BB">Barbados</option>
-                    <option value="BY">Belarus</option>
-                    <option value="BE">Belgium</option>
-                    <option value="BZ">Belize</option>
-                    <option value="BJ">Benin</option>
-                    <option value="BT">Bhutan</option>
-                    <option value="BO">Bolivia</option>
-                    <option value="BA">Bosnia and Herzegovina</option>
-                    <option value="BW">Botswana</option>
-                    <option value="BR">Brazil</option>
-                    <option value="BN">Brunei</option>
-                    <option value="BG">Bulgaria</option>
-                    <option value="BF">Burkina Faso</option>
-                    <option value="BI">Burundi</option>
-                    <option value="CV">Cabo Verde</option>
-                    <option value="KH">Cambodia</option>
-                    <option value="CM">Cameroon</option>
-                    <option value="CA">Canada</option>
-                    <option value="CF">Central African Republic</option>
-                    <option value="TD">Chad</option>
-                    <option value="CL">Chile</option>
-                    <option value="CN">China</option>
-                    <option value="CO">Colombia</option>
-                    <option value="KM">Comoros</option>
-                    <option value="CG">Congo</option>
-                    <option value="CR">Costa Rica</option>
-                    <option value="HR">Croatia</option>
-                    <option value="CU">Cuba</option>
-                    <option value="CY">Cyprus</option>
-                    <option value="CZ">Czechia</option>
-                    <option value="DK">Denmark</option>
-                    <option value="DJ">Djibouti</option>
-                    <option value="DM">Dominica</option>
-                    <option value="DO">Dominican Republic</option>
-                    <option value="EC">Ecuador</option>
-                    <option value="EG">Egypt</option>
-                    <option value="SV">El Salvador</option>
-                    <option value="GQ">Equatorial Guinea</option>
-                    <option value="ER">Eritrea</option>
-                    <option value="EE">Estonia</option>
-                    <option value="SZ">Eswatini</option>
-                    <option value="ET">Ethiopia</option>
-                    <option value="FJ">Fiji</option>
-                    <option value="FI">Finland</option>
-                    <option value="FR">France</option>
-                    <option value="GA">Gabon</option>
-                    <option value="GM">Gambia</option>
-                    <option value="GE">Georgia</option>
-                    <option value="DE">Germany</option>
-                    <option value="GH">Ghana</option>
-                    <option value="GR">Greece</option>
-                    <option value="GT">Guatemala</option>
-                    <option value="GN">Guinea</option>
-                    <option value="HT">Haiti</option>
-                    <option value="HN">Honduras</option>
-                    <option value="HU">Hungary</option>
-                    <option value="IS">Iceland</option>
-                    <option value="IN">India</option>
-                    <option value="ID">Indonesia</option>
-                    <option value="IR">Iran</option>
-                    <option value="IQ">Iraq</option>
-                    <option value="IE">Ireland</option>
-                    <option value="IL">Israel</option>
-                    <option value="IT">Italy</option>
-                    <option value="JM">Jamaica</option>
-                    <option value="JP">Japan</option>
-                    <option value="JO">Jordan</option>
-                    <option value="KZ">Kazakhstan</option>
-                    <option value="KE">Kenya</option>
-                    <option value="KW">Kuwait</option>
-                    <option value="LA">Laos</option>
-                    <option value="LV">Latvia</option>
-                    <option value="LB">Lebanon</option>
-                    <option value="LS">Lesotho</option>
-                    <option value="LR">Liberia</option>
-                    <option value="LY">Libya</option>
-                    <option value="LT">Lithuania</option>
-                    <option value="LU">Luxembourg</option>
-                    <option value="MG">Madagascar</option>
-                    <option value="MY">Malaysia</option>
-                    <option value="MV">Maldives</option>
-                    <option value="ML">Mali</option>
-                    <option value="MT">Malta</option>
-                    <option value="MX">Mexico</option>
-                    <option value="MC">Monaco</option>
-                    <option value="MN">Mongolia</option>
-                    <option value="MA">Morocco</option>
-                    <option value="MZ">Mozambique</option>
-                    <option value="MM">Myanmar</option>
-                    <option value="NA">Namibia</option>
-                    <option value="NP">Nepal</option>
-                    <option value="NL">Netherlands</option>
-                    <option value="NZ">New Zealand</option>
-                    <option value="NG">Nigeria</option>
-                    <option value="NO">Norway</option>
-                    <option value="OM">Oman</option>
-                    <option value="PK">Pakistan</option>
-                    <option value="PA">Panama</option>
-                    <option value="PE">Peru</option>
-                    <option value="PH">Philippines</option>
-                    <option value="PL">Poland</option>
-                    <option value="PT">Portugal</option>
-                    <option value="QA">Qatar</option>
-                    <option value="RO">Romania</option>
-                    <option value="RU">Russia</option>
-                    <option value="SA">Saudi Arabia</option>
-                    <option value="SG">Singapore</option>
-                    <option value="ZA">South Africa</option>
-                    <option value="KR">South Korea</option>
-                    <option value="ES">Spain</option>
-                    <option value="LK">Sri Lanka</option>
-                    <option value="SE">Sweden</option>
-                    <option value="CH">Switzerland</option>
-                    <option value="TH">Thailand</option>
-                    <option value="TR">Turkey</option>
-                    <option value="UA">Ukraine</option>
-                    <option value="AE">United Arab Emirates</option>
-                    <option value="GB">United Kingdom</option>
-                    <option value="US">United States</option>
-                    <option value="VN">Vietnam</option>
-                    <option value="YE">Yemen</option>
-                    <option value="ZW">Zimbabwe</option>
-                </select><br>
-               <a
-                        style="text-decoration: none; color: black;" href="#"> <button style="margin-top: 40px; border-radius: 10px; padding: 10px 40px;">Done</button></a>
-            </form>
-        </center>
+            <label class="form-label">Gender</label>
+            <select class="form-input" name="gender">
+                <option value="">-- Select Gender --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label class="form-label">Select Country</label>
+            <select class="form-input" name="country">
+                <option value="">-- Select a Country --</option>
+                <option value="IN">India</option>
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                </select>
+            
+            <a href="#" class="btn">Done</a>
+        </form>
     </div>
+
+    <script>
+        document.getElementById("file-input").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("profilePic").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-<script>
-    document.getElementById("file-input").addEventListener("change", function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById("profilePic").src = e.target.result;
-                document.getElementById("profilePic").style.display = "block"; // Show image
-                document.querySelector(".alt-text").style.display = "none"; // Hide text
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

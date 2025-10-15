@@ -1,42 +1,132 @@
+/* General mobile-first styles */
 * {
-    font-family: Nunito;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* Added a fallback font */
 }
 
-button {
-    border-radius: 60px;
-    background-color: #e2b2b2;
-    padding: 10px 40px;
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
-#start {
-    margin-top: 30%;
+/* Shared container for login, details, create, etc. */
+.main-container {
+    width: 100%;
+    max-width: 450px; /* Set a max-width for better readability on large screens */
+    margin: auto;
 }
 
-#sign {
-    margin-top: 25%;
-}
-
-.a {
-    border-radius: 10px;
-    padding: 10px 50px;
-    margin-top: 50px;
-}
-
-.login {
-    margin-top: 20%;
-}
-
-.b {
+/* General input and select styling */
+.form-input {
     border-radius: 5px;
-    padding: 10px;
-    margin-top: 7px;
-    width: 18%;
+    padding: 12px;
+    margin-top: 8px;
+    width: 100%; /* Full width on mobile */
+    border: 1px solid #ccc;
 }
 
-.c {
-    margin-left: -200px;
+/* General button styling */
+.btn {
+    border: none;
+    border-radius: 10px;
+    background-color: #e2b2b2;
+    padding: 12px 40px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px; /* Max-width for buttons */
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
 }
 
-.details {
-    margin-top: 18%;
+.btn:hover {
+    background-color: #d69b9b;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Specific Page Styles */
+#start, #sign {
+    margin-top: 15vh;
+}
+
+.form-label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Checkbox alignment helper */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 8px; /* Adds space between checkbox and label */
+    margin-top: 15px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+/* Profile picture styles for details.html */
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    position: relative;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#file-input {
+    display: none;
+}
+
+/* Media Query for Desktops */
+@media (min-width: 768px) {
+    .form-input {
+        width: 80%; /* Reduce width on larger screens */
+    }
+
+    .btn {
+        width: auto; /* Allow button width to fit content */
+        padding: 12px 80px;
+    }
 }
